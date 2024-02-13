@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="data.css">
+    <title>Data</title>
+</head>
+
+<body class="bg-gradient">
+    <div class="text">
+        <p class="innertext">Product Statistics </p>
+    </div>
+    <div class="box">
+        <img class="box-items" src=".\data_graphs\scatter.png" alt="Scatter Plot">
+        <img class="box-items" src=".\data_graphs\bar1.png" alt="Bar Graph-1">
+        <img class="box-items" src=".\data_graphs\bar2.png" alt="Bar Graph-2">
+        <img class="box-items" src=".\data_graphs\pie.png" alt="Pie Chart">
+        <img class="box-items" src=".\data_graphs\product_type_distribution_Assam.png" alt="Assam">
+        <img class="box-items" src=".\data_graphs\product_type_distribution_Bihar.png" alt="Bihar">
+        <img class="box-items" src=".\data_graphs\product_type_distribution_Chhattisgarh.png" alt="Chhattisgarh">
+        <img class="box-items" src=".\data_graphs\product_type_distribution_Goa.png" alt="Goa">
+        <img class="box-items" src=".\data_graphs\product_type_distribution_Gujarat.png" alt="Gujarat">
+        <img class="box-items" src=".\data_graphs\product_type_distribution_Haryana.png" alt="Haryana">
+        <img class="box-items" src=".\data_graphs\product_type_distribution_Himachal Pradesh.png" alt="Himachal Pradesh">
+        <img class="box-items" src=".\data_graphs\product_type_distribution_Jharkhand.png" alt="Jharkhand">
+        <img class="box-items" src=".\data_graphs\product_type_distribution_Kerala.png" alt="Kerala">
+        <img class="box-items" src=".\data_graphs\product_type_distribution_Maharashtra.png" alt="Maharashtra">
+        <img class="box-items" src=".\data_graphs\product_type_distribution_Manipur.png" alt="Manipur">
+        <img class="box-items" src=".\data_graphs\product_type_distribution_Mizoram.png" alt="Mizoram">
+        <img class="box-items" src=".\data_graphs\product_type_distribution_Nagaland.png" alt="Nagaland">
+        <img class="box-items" src=".\data_graphs\product_type_distribution_Odisha.png" alt="Odisha">
+        <img class="box-items" src=".\data_graphs\product_type_distribution_Punjab.png" alt="Punjab">
+        <img class="box-items" src=".\data_graphs\product_type_distribution_Rajasthan.png" alt="Rajasthan">
+        <img class="box-items" src=".\data_graphs\product_type_distribution_Tamil Nadu.png" alt="Tamil Nadu">
+        <img class="box-items" src=".\data_graphs\product_type_distribution_Telangana.png" alt="Telangana">
+        <img class="box-items" src=".\data_graphs\product_type_distribution_Tripura.png" alt="Tripura">
+        <img class="box-items" src=".\data_graphs\product_type_distribution_Uttarakhand.png" alt="Uttarakhand">
+        <img class="box-items" src=".\data_graphs\product_type_distribution_West Bengal.png" alt="West Bengal">
+    </div>
+    <script>
+        const boxItems = document.querySelectorAll('.box-items');
+      
+        boxItems.forEach(boxItem => {
+          boxItem.addEventListener('click', () => {
+            if (boxItem.style.position === 'fixed') {
+              // Hide the image
+              boxItem.style.position = '';
+              boxItem.style.top = '';
+              boxItem.style.left = '';
+              boxItem.style.width = '';
+              boxItem.style.height = '';
+              boxItem.style.border = '';
+              boxItem.style.zIndex = '';
+            } else {
+              // Display the image
+              boxItem.style.position = 'fixed';
+              boxItem.style.top = '20%';
+              boxItem.style.left = '10%';
+              boxItem.style.width = '80%';
+              boxItem.style.height = '70%';
+              boxItem.style.cursor = 'pointer';
+              boxItem.style.border = '2px solid black';
+              boxItem.style.zIndex = 9999;
+            }
+          });
+      
+          boxItem.addEventListener('keyup', (event) => {
+            if (event.key === 'Escape') {
+              // Hide the image on pressing Escape key
+              boxItem.style.position = '';
+              boxItem.style.top = '';
+              boxItem.style.left = '';
+              boxItem.style.width = '';
+              boxItem.style.height = '';
+              boxItem.style.border = '';
+              boxItem.style.zIndex = '';
+            }
+          });
+        });
+      </script>
+</body>
+</html>
